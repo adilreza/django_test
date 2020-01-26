@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>upload page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1 >My Upload Page Page</h1>
+  <p>---- this is my upload page ----</p>
+</div>
+
+<div class="container">
+  <div class="container">
+  <h2>Stacked form</h2>
+  <form action="/get_input_post/" method="post" enctype='multipart/form-data'>
+    {%csrf_token%}
+    <div class="form-group">
+      <label for="pwd">File here (please follow the instructions before uploading the file)</label>
+      <input type="file" class="form-control" id="pwd"  name="files">
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+  </form>
+</div>
+</div>
+
+</body>
+</html>
